@@ -17,9 +17,9 @@ const Routing = () => {
     <Router>
       <Header/>
       <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route exact path='/search' element={<Exercise />}></Route>
-        <Route exact path="/profile" element={<ProfileInfo />}></Route>
+        <Route  exact path="/" element={<Home />}></Route>
+        <Route  exact path='/search' element={<Exercise />}></Route>
+        <Route  exact path="/profile" element={<ProfileInfo />}></Route>
       </Routes>
     </Router>
   )
