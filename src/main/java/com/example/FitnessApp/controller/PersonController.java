@@ -30,7 +30,7 @@ public class PersonController {
     }
 
     @RequestMapping(path="/update/{id}", method = RequestMethod.PUT)
-    public void updateUser(@Valid @RequestBody Person updatedPerson, @PathVariable int id, Principal principal){
+    public void updateUser(@RequestBody Person updatedPerson, @PathVariable int id){
         dao.updateUser(updatedPerson, id);
     }
 

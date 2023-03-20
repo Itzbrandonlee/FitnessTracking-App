@@ -1,6 +1,7 @@
 import '../CSS/profile.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import UpdateProfile from '../Components/updateProfile'
 
     function ProfileInfo(){
         const [profileData, setProfileData] = useState([]);
@@ -23,6 +24,7 @@ import axios from 'axios';
                     <b>Height:</b> { profileData.height }inches<br/>
                     </p>
                 </div>
+                <UpdateProfile />
         </div>
     );
 }

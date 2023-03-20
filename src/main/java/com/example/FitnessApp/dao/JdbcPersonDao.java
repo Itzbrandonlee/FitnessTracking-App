@@ -56,12 +56,13 @@ public class JdbcPersonDao implements PersonDao{
 
     @Override
     public void updateUser(Person updatedPerson, int id) {
-        String sql = "UPDATE person SET first_name = ?, last_name = ?, age = ?, current_weight = ?, goal_weight = ?, height = ?, user_id = ? WHERE person_id = ?;";
+        String sql = "UPDATE person SET first_name = ?, last_name = ?, age = ?, current_weight = ?, goal_weight = ?, height = ? WHERE person_id = ?;";
 
         try {
-            jdbcTemplate.update(sql, updatedPerson.getFirstName(), updatedPerson.getLastName(), updatedPerson.getAge(), updatedPerson.getCurrentWeight(), updatedPerson.getGoalWeight(), updatedPerson.getHeight(), updatedPerson.getUserId(), id);
-        } catch (Error e) {
-            System.out.println("Unable to complete");
+            jdbcTemplate.update(sql, updatedPerson.getFirstName(), updatedPerson.getLastName(), updatedPerson.getAge(), updatedPerson.getCurrentWeight(), updatedPerson.getGoalWeight(), updatedPerson.getHeight(), id);
+        } catch (Exception e) {
+            System.err.println("Unable to complete" + e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 
