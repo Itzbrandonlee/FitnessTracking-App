@@ -1,0 +1,28 @@
+.workouts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    align-items: center;
+}
+
+.workout-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 2px 16px;
+}
+
+.create-workout {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    align-items: center;
+    
+}
+
+.create-workout form {
+    display:flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 10%;
+}

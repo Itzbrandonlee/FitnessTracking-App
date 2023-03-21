@@ -4,9 +4,11 @@ import './CSS/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './Views/home';
-import Exercise from './Components/exercise';
+import Exercise from './Views/exercise';
 import ProfileInfo from './Views/ProfileInfo';
-import Header from './Components/Header'
+import Header from './Components/Header';
+import Workouts from './Views/Workout';
+import CreateWorkout from './Components/CreateWorkout'
 import {BrowserRouter as Router,
         Route,
         Routes
@@ -20,6 +22,8 @@ const Routing = () => {
         <Route  exact path="/" element={<Home />}></Route>
         <Route  exact path='/search' element={<Exercise />}></Route>
         <Route  exact path="/profile" element={<ProfileInfo />}></Route>
+        <Route exact path='/workouts' element={<Workouts />}></Route>
+        <Route exact path="/workouts/create" element={<CreateWorkout />}></Route>
       </Routes>
     </Router>
   )

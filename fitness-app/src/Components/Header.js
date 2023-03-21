@@ -14,6 +14,7 @@ export default function header() {
             <Link className="link-styles" to="/search">Search</Link>
             <Link className="link-styles" to="/workouts">Workouts</Link>
             <Link className="link-styles" to="/profile">Profile</Link>
+            
         </div>
     </header>
     )
